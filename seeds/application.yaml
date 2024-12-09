@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: yada-application 
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Oran901/yada-gitops-app.git
+    targetRevision: HEAD 
+    path: app/yada 
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: yada 
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
