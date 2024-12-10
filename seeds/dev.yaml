@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Oran901/yada-gitops-app.git
     targetRevision: HEAD 
-    path: environment/dev 
+    path: environments/dev 
   destination:
     server: https://kubernetes.default.svc
     namespace: seed-namespace 
