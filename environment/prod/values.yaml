@@ -1,0 +1,19 @@
+global:
+  environment: dev
+  chart:
+    # -- Github repositroy it resides in
+    repo: https://github.com/Oran901/yada-gitops-app.git
+    # -- Branch/Commit/Tag that we are looking at
+    targetRevision: HEAD 
+  # -- Points towards the values file used by the environment
+  values:
+    # -- Github repositroy it resides in
+    repo: https://github.com/Oran901/yada-gitops-app.git
+    # -- Branch/Commit/Tag that we are looking at
+    targetRevision: main
+
+replicaCount: 2
+
+service:
+  type: NodePort
+  port: 80
