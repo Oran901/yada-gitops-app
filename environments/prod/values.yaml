@@ -1,5 +1,5 @@
 global:
-  environment: dev
+  environment: prod
   chart:
     # -- Github repositroy it resides in
     repo: https://github.com/Oran901/yada-gitops-app.git
